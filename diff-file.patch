@@ -1,0 +1,23 @@
+
+diff --git a/src/main/kotlin/io/github/surpsg/deltacovsample/BranchesCoverage.kt b/src/main/kotlin/io/github/surpsg/deltacovsample/BranchesCoverage.kt
+--- a/src/main/kotlin/io/github/surpsg/deltacovsample/BranchesCoverage.kt
++++ b/src/main/kotlin/io/github/surpsg/deltacovsample/BranchesCoverage.kt
+@@ -2,13 +2,13 @@
+
+ object BranchesCoverage {
+
+-    fun partiallyCovered(args: Array<String>) {
+-        if (args.isEmpty()) {
+-            println("args is empty")
+-        } else {
+-            println("args is not empty")
+-        }
+-    }
++    fun partiallyCovered(args: Array<String>) {
++        if (args.isEmpty()) {
++            println("args is empty")
++        } else {
++            println("args is not empty")
++        }
++    }
+ }
