@@ -1,23 +1,29 @@
+===================================================================
+diff --git a/src/main/java/io/github/surpsg/deltacovsample/JavaClass.java b/src/main/java/io/github/surpsg/deltacovsample/JavaClass.java
+--- a/src/main/java/io/github/surpsg/deltacovsample/JavaClass.java
++++ b/src/main/java/io/github/surpsg/deltacovsample/JavaClass.java
+@@ -3,6 +3,6 @@
+ public class JavaClass {
 
+     public void javaMethod() {
+-        System.out.println("Hello from java");
++        System.out.println("Hello from java");
+     }
+ }
+===================================================================
 diff --git a/src/main/kotlin/io/github/surpsg/deltacovsample/BranchesCoverage.kt b/src/main/kotlin/io/github/surpsg/deltacovsample/BranchesCoverage.kt
 --- a/src/main/kotlin/io/github/surpsg/deltacovsample/BranchesCoverage.kt
 +++ b/src/main/kotlin/io/github/surpsg/deltacovsample/BranchesCoverage.kt
-@@ -2,13 +2,13 @@
-
+@@ -3,9 +3,9 @@
  object BranchesCoverage {
 
--    fun partiallyCovered(args: Array<String>) {
+     fun partiallyCovered(args: Array<String>) {
+-        JavaClass().javaMethod()
 -        if (args.isEmpty()) {
 -            println("args is empty")
--        } else {
--            println("args is not empty")
--        }
--    }
-+    fun partiallyCovered(args: Array<String>) {
++        JavaClass().javaMethod()
 +        if (args.isEmpty()) {
 +            println("args is empty")
-+        } else {
-+            println("args is not empty")
-+        }
-+    }
- }
+         } else {
+             println("args is not empty")
+         }

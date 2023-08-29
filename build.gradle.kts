@@ -4,6 +4,7 @@ plugins {
     kotlin("jvm") version "1.9.0"
     `java-library`
     `jvm-test-suite`
+    jacoco
 
     id("io.github.surpsg.delta-coverage") version "1.1.0"
 }
