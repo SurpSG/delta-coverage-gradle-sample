@@ -4,8 +4,9 @@ object BranchesCoverage {
 
     fun partiallyCovered(args: Array<String>) {
         JavaClass().javaMethod()
-        if (args.isEmpty()) {
-            println("args is empty")
+        println("1") // added line
+        if (args.isEmpty()) { // changed line 1
+            println("args is empty") // changed line 2
         } else {
             println("args is not empty")
         }

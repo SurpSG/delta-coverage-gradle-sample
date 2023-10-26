@@ -1,11 +1,8 @@
-import io.github.surpsg.deltacoverage.gradle.DeltaCoverageConfiguration
-
 plugins {
-    kotlin("jvm") version "1.9.0"
-    `java-library`
-    `jvm-test-suite`
-    jacoco
-
+    id 'org.jetbrains.kotlin.jvm' version '1.9.10'
+    id 'java-library'
+    id 'jvm-test-suite'
+    id 'jacoco'
     id("io.github.surpsg.delta-coverage") version "1.1.0"
 }
 
@@ -21,16 +18,17 @@ kotlin {
 }
 
 testing.suites {
-    val test by getting(JvmTestSuite::class) {
+    test {
         useJUnitJupiter()
     }
 }
 
 
-configure<DeltaCoverageConfiguration> {
-    diffSource.file.set("./diff-file.patch")
+deltaCoverageReport {
+    diffSource.git.compareWith('refs/remotes/origin/main')
 
     violationRules.failIfCoverageLessThan(0.5)
+
     reports {
         html.set(true)
     }
